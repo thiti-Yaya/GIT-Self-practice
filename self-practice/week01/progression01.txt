@@ -1,0 +1,58 @@
+ใช้chatgpt อธิบายเพิ่มเล็กน้อย
+
+Array สามารถเก็บค่าหลายชนิดในตัวเดียวได้
+1. create array with many data type
+let a = 10;
+let b = "hello";
+let c = false;
+
+2. print array size
+console.log(arr.length) 
+.length ใช้นับจำนวนสมาชิกใน arr
+
+3. fist item
+console.log(arr[0])
+
+4. last item
+console.log(arr.length-1)
+
+
+5. print every item in the array
+for (i=0;i<arr.length;i++){
+    console.log(arr[i])
+}
+
+7. shrink array with any operation  
+arr.pop()
+console.log(arr.pop());
+.pop ใช้เพื่อลบสมาชิกตัวท้ายออก
+
+--------------------------------
+8. Array ที่เก็บหลายObject
+const colors=[{id:1, name:'red', tone:'hot'},
+{id:2, name:'purple', tone:'cool'},
+{id:3, name:'white', tone:'neutral'}
+]
+colors เป็น array ของ object
+console.log(colors[1]); => เลือก object ตัวที่สอง ({id:2, name:'purple', tone:'cool'})
+
+9. Array ที่เก็บ Object ซับซ้อน
+const contacts=[{email:['abc@gmail.com','foo@kmutt.ac.th']}, 
+{address:['Bangkok', 'Puket']}]
+console.log(contacts[0].email[1]); => contacts[0] = objectแรก มีkey ชื่อemail ซึ่งเป็นarray 
+console.log(contacts[1].address[1]); => เลือกสมาชิกตัวที่สองของ address
+
+10. Arrayที่เก็บหลายArray (array contains many arrays)
+const groups=[['Malee', 'Jane'], ['John', 'Jay', 'Pete']] 
+=> groups เป็นarray ซ้อนarray
+console.log(groups.map(group => group[group.length - 1])); ตัวสุดท้ายของแต่ละกลุ่ม
+console.log(groups[0][1]); กลุ่มแรก เลือกindex 1 
+console.log(groups[1][2]); กลุ่มสอง เลือกindex
+
+------------------------
+
+สรุป week1 
+- array เก็บข้อมูลได้หลายชนิด (number, string, boolean, object, array)
+- array สามารถขยายเพื่อเพิ่มสมาชิก หรือหดเพื่อลบสมาชิกได้
+- array เข้าถึงค่าผ่านindex/การซ้อนกัน (object/array ซ้อน array)
+- array ใช้method เพื่อจัดการข้อมูลได้สะดวก
